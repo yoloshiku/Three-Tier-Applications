@@ -1,4 +1,4 @@
-FROM mysql:latest
+FROM --platform=linux/arm64 mysql:latest
 
 # Set environment variables
 ENV MYSQL_ROOT_PASSWORD=mysql123
