@@ -33,6 +33,8 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=mysql123
       - MYSQL_DATABASE=school
+    networks:
+      - three-tier-net
     volumes:
       - mysql-data:/var/lib/mysql
 volumes:
