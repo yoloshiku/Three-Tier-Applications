@@ -2,9 +2,7 @@ version: '3'
 services:
   frontend: 
     container_name: frontend
-    build: 
-      context: frontend/
-    image: fronted-image
+    image: yoloshikudkr/3t-front
     ports: 
       - "80:80"
     depends_on:
@@ -13,9 +11,7 @@ services:
       - three-tier-net 
   backend:
     container_name: backend
-    build: 
-      context: backend/
-    image: backend-image
+    image: yoloshikudkr/3t-back
     ports: 
       - "3500:3500"
     environment:
@@ -29,7 +25,7 @@ services:
       - three-tier-net
   db:
     container_name: mysql-container
-    image: mysql:latest
+    image: yoloshikudkr/3t-db
     environment:
       - MYSQL_ROOT_PASSWORD=mysql123
       - MYSQL_DATABASE=school
