@@ -1,3 +1,4 @@
+# Do not use it, use MySql image without builing the db container
 FROM --platform=linux/arm64 mysql:latest
 
 # Set environment variables
