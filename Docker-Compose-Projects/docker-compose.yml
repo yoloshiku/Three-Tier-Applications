@@ -5,6 +5,8 @@ services:
     image: yoloshikudkr/3t-front
     ports: 
       - "80:80"
+    environment:                                                                                                                                                            │
+     - REACT_APP_API_BASE_URL=http://141.147.149.145:3500
     depends_on:
       - backend
     networks:
