@@ -25,7 +25,7 @@ services:
       - three-tier-net
   db:
     container_name: mysql-container
-    image: yoloshikudkr/3t-db
+    image: mysql:latest
     environment:
       - MYSQL_ROOT_PASSWORD=mysql123
       - MYSQL_DATABASE=school
