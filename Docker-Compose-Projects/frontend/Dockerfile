@@ -1,8 +1,10 @@
 # Stage 1: Build the application using Node.js
-FROM node:21-alpine3.17 as build
+#FROM node:21-alpine3.17 as build
+From node:24-alpine3.22 as build
+
 WORKDIR /app
 COPY . .
-RUN npm config set registry http://registry.npmjs.org/
+#RUN npm config set registry http://registry.npmjs.org/
 RUN npm install
 RUN npm run build
 
