@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: backend
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: backend
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: nahid0002/three-tier-backend:v1
+          image: yoloshikudkr/3t-back:latest
           ports:
             - containerPort: 3500
           env:
