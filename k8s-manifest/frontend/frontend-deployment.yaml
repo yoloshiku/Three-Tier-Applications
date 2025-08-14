@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: frontend
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: frontend
@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: nahid0002/three-tier-frontend:v1
+          image: yoloshikudkr/3t-front:latest
           ports:
             - containerPort: 80
           env:
             - name: REACT_APP_API_BASE_URL
-              value: "http://98.83.212.76:32000"
+              value: "http://140.83.85.226:32000"
