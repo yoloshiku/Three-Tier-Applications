@@ -20,3 +20,7 @@ spec:
           env:
             - name: REACT_APP_API_BASE_URL
               value: "http://140.83.85.226:32000"
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: "Exists"
+        effect: "NoSchedule"
