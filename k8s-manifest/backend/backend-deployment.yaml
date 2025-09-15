@@ -15,6 +15,7 @@ spec:
       containers:
         - name: backend
           image: yoloshikudkr/3t-back:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 3500
           env:
