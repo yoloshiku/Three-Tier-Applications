@@ -15,6 +15,7 @@ spec:
       containers:
         - name: frontend
           image: yoloshikudkr/3t-front:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
           env:
