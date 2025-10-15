@@ -1,15 +1,4 @@
 # ---------------------------------------
-# Provider Configuration
-# ---------------------------------------
-provider "oci" {
-  tenancy_ocid        = var.tenancy_ocid
-  user_ocid           = var.user_ocid
-  fingerprint         = var.fingerprint
-  private_key_path    = var.private_key_path
-  region              = var.region
-}
-
-# ---------------------------------------
 # Data Sources (look up OCI resources)
 # ---------------------------------------
 data "oci_identity_availability_domains" "ads" {
