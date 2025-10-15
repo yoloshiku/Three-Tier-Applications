@@ -1,25 +1,45 @@
 variable "tenancy_ocid" {
-  description = "OCI Tenancy OCID"
+  description = "OCI tenancy OCID"
   type        = string
 }
 
 variable "user_ocid" {
-  description = "OCI User OCID"
+  description = "OCI user OCID"
   type        = string
 }
 
 variable "fingerprint" {
-  description = "Fingerprint of the uploaded OCI API key"
+  description = "OCI API key fingerprint"
   type        = string
 }
 
 variable "private_key_path" {
-  description = "Path to the private API key on the agent"
+  description = "Path to your OCI API private key"
   type        = string
 }
 
 variable "region" {
   description = "OCI region"
   type        = string
-  default     = "us-ashburn-1"
+}
+
+variable "compartment_ocid" {
+  description = "Compartment OCID where instance will be created"
+  type        = string
+}
+
+variable "subnet_ocid" {
+  description = "Existing subnet OCID"
+  type        = string
+}
+
+variable "instance_shape" {
+  description = "Instance shape"
+  type        = string
+  default     = "VM.Standard.A1.Flex"
+}
+
+variable "ssh_public_key_path" {
+  description = "Path to your SSH public key file"
+  type        = string
 }
