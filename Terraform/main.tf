@@ -6,6 +6,10 @@ data "oci_core_images" "ubuntu_2204_minimal_arm" {
   sort_order               = "DESC"
 }
 
+data "oci_identity_availability_domains" "ads" {
+  compartment_id = var.tenancy_ocid
+}
+
 resource "oci_core_instance" "vm_instance" {
   availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
   compartment_id      = var.compartment_ocid
