@@ -6,3 +6,7 @@ region             = "ap-osaka-1"
 compartment_ocid   = "ocid1.compartment.oc1..aaaa..."
 subnet_ocid        = "ocid1.subnet.oc1..aaaa..."
 ssh_public_key_path = "~/.ssh/id_rsa.pub"
+
+availability_domain = var.availability_domain--hnjV-AP-OSAKA-1-AD-1
+subnet_id              = oci_core_subnet.export_subnet-Internet-GW.id
+compartment_id = oci_license_manager_configuration.export_configuration.id
