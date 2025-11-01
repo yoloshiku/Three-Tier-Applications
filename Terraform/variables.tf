@@ -8,6 +8,8 @@ variable "availability_domain" {}
 variable "instance_shape" {
   default = "VM.Standard.A1.Flex" # same as KubeMaster
 }
-variable "ssh_public_key_path" {
-  default = "~/.ssh/id_rsa.pub"
+variable "private_key" {
+  description = "The OCI API private key, provided as a secret environment variable from ADO"
+  type        = string
+  sensitive   = true
 }
