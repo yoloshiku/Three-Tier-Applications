@@ -59,9 +59,6 @@ resource "oci_core_instance" "kubenode1" {
     source_id   = "ocid1.image.oc1.ap-osaka-1.aaaaaaaatobebuoafkjs3zgkt5nakf3o4fuwsbmvlkfup7a5esx4h4qbieiq"
   }
 
-  metadata = {
-    ssh_authorized_keys = file(var.ssh_public_key_path)
-  }
 
   preserve_boot_volume = false
 }
