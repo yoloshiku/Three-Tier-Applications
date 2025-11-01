@@ -13,6 +13,9 @@ provider "oci" {
   fingerprint      = var.fingerprint
   private_key_path = var.private_key_path
   region           = var.region
+
+ # Use the private key value directly from a pipeline variable
+  private_key  = var.private_key
 }
 
 # ─────────────────────────────────────────────
@@ -44,7 +47,7 @@ resource "oci_core_instance" "kubenode1" {
 
   # Reuse existing subnet (same network as KubeMaster)
   create_vnic_details {
-    subnet_id        = data.oci_core_subnets.existing.subnets[0].id
+    subnet_id        = "ocid1.subnet.oc1.ap-osaka-1.aaaaaaaa47id54i3pcunej3eqj66pk4bn5lfy2vl3yaj2n5xvmwf3tlhgrqa"
     assign_public_ip = true
     display_name     = "KubeNode1-VNIC"
     hostname_label   = "kubenode1"
@@ -53,7 +56,7 @@ resource "oci_core_instance" "kubenode1" {
   # Same image as KubeMaster
   source_details {
     source_type = "image"
-    source_id   = data.oci_core_images.kube_image.images[0].id
+    source_id   = "ocid1.image.oc1.ap-osaka-1.aaaaaaaatobebuoafkjs3zgkt5nakf3o4fuwsbmvlkfup7a5esx4h4qbieiq"
   }
 
   metadata = {
