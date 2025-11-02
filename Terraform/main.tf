@@ -58,7 +58,10 @@ resource "oci_core_instance" "kubenode1" {
     source_type = "image"
     source_id   = "ocid1.image.oc1.ap-osaka-1.aaaaaaaatobebuoafkjs3zgkt5nakf3o4fuwsbmvlkfup7a5esx4h4qbieiq"
   }
-
+  shape_config {
+    ocpus         = 1
+    memory_in_gbs = 6
+  }
 
   preserve_boot_volume = false
 }
