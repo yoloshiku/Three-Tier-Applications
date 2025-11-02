@@ -3,7 +3,7 @@ user_ocid          = "ocid1.user.oc1..aaaaaaaas3ahdk52x6f7cwnx6hhpk6ztwhzmfropnc
 fingerprint        = "21:7f:d4:cb:2f:0d:ec:9e:93:47:66:df:b3:9f:9b:59"
 private_key_path   = "~/.oci/oci_api_key.pem"
 region             = "ap-osaka-1"
-compartment_ocid   = "ocid1.compartment.oc1..aaaa..."
+compartment_ocid   = "ocid1.tenancy.oc1..aaaaaaaakigmemchd3nfg2e64eqihkbnxp4s2f5jxqayz6rs4darb3k5457a"
 subnet_ocid        = "ocid1.subnet.oc1.ap-osaka-1.aaaaaaaa47id54i3pcunej3eqj66pk4bn5lfy2vl3yaj2n5xvmwf3tlhgrqa"
 ssh_public_key_path = "~/.ssh/id_rsa.pub"
 
