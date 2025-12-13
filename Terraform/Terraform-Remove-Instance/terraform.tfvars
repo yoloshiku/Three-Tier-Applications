@@ -1,0 +1,13 @@
+tenancy_ocid       = "ocid1.tenancy.oc1..aaaaaaaakigmemchd3nfg2e64eqihkbnxp4s2f5jxqayz6rs4darb3k5457a"
+user_ocid          = "ocid1.user.oc1..aaaaaaaas3ahdk52x6f7cwnx6hhpk6ztwhzmfropncttahqmhqoxpfjxmc2a"
+fingerprint        = "21:7f:d4:cb:2f:0d:ec:9e:93:47:66:df:b3:9f:9b:59"
+private_key_path   = "~/.oci/oci_api_key.pem"
+region             = "ap-osaka-1"
+compartment_ocid   = "ocid1.tenancy.oc1..aaaaaaaakigmemchd3nfg2e64eqihkbnxp4s2f5jxqayz6rs4darb3k5457a"
+subnet_ocid        = "ocid1.subnet.oc1.ap-osaka-1.aaaaaaaa47id54i3pcunej3eqj66pk4bn5lfy2vl3yaj2n5xvmwf3tlhgrqa"
+#ssh_public_key_path = "~/.ssh/id_rsa.pub"
+
+availability_domain = "hnjV:AP-OSAKA-1-AD-1"
+instance_shape      = "VM.Standard.A1.Flex"
+image_ocid          = "ocid1.image.oc1.ap-osaka-1.aaaaaaaatobebuoafkjs3zgkt5nakf3o4fuwsbmvlkfup7a5esx4h4qbieiq"
+#ssh_authorized_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQ..."
