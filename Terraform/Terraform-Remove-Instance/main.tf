@@ -1,40 +1,40 @@
-# terraform {
-#   required_providers {
-#     oci = {
-#       source  = "oracle/oci"
-#       version = "~> 6.0"
-#     }
-#   }
-# }
-# 
-# provider "oci" {
-#   tenancy_ocid     = var.tenancy_ocid
-#   user_ocid        = var.user_ocid
-#   fingerprint      = var.fingerprint
-#   private_key_path = var.private_key_path
-#   region           = var.region
-# 
-#  # Use the private key value directly from a pipeline variable
-#   private_key  = var.private_key
-# }
+ terraform {
+   required_providers {
+     oci = {
+       source  = "oracle/oci"
+       version = "~> 6.0"
+     }
+   }
+ }
+ 
+ provider "oci" {
+   tenancy_ocid     = var.tenancy_ocid
+   user_ocid        = var.user_ocid
+   fingerprint      = var.fingerprint
+   private_key_path = var.private_key_path
+   region           = var.region
+ 
+  # Use the private key value directly from a pipeline variable
+   private_key  = var.private_key
+ }
 # 
 # # ─────────────────────────────────────────────
 # #  Get existing subnet and image from OCI
 # # ─────────────────────────────────────────────
 # 
 # # Lookup existing subnet used by KubeMaster
-# data "oci_core_subnets" "existing" {
-#   compartment_id = var.compartment_ocid
-#   display_name   = "subnet-Internet-GW" # same subnet name as KubeMaster
-# }
+ data "oci_core_subnets" "existing" {
+   compartment_id = var.compartment_ocid
+   display_name   = "subnet-Internet-GW" # same subnet name as KubeMaster
+ }
 # 
-# # Lookup existing image (Ubuntu 22.04 or same as KubeMaster)
-# data "oci_core_images" "kube_image" {
-#   compartment_id = var.compartment_ocid
-#   operating_system = "Canonical Ubuntu"
-#   operating_system_version = "22.04"
-#   shape = var.instance_shape
-# }
+ # Lookup existing image (Ubuntu 22.04 or same as KubeMaster)
+ data "oci_core_images" "kube_image" {
+   compartment_id = var.compartment_ocid
+   operating_system = "Canonical Ubuntu"
+   operating_system_version = "22.04"
+   shape = var.instance_shape
+ }
 # 
 # # ─────────────────────────────────────────────
 # #  Create New Instance (KubeNode1)
